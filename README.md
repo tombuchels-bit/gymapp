@@ -41,4 +41,4 @@ In **Instellingen → Back-up & gegevens** exporteer je een volledige JSON-back-
 
 ## Huidige scope
 
-De basis omvat oefenbibliotheek, routines aanmaken, sessies autosaven en hervatten, sets bijhouden, trainingshistorie, schattingen van 1RM met de Epley-formule voor gewogen sets, lichaamsmetingen, instellingen, back-up en PWA-installatie. Routines zijn in deze eerste versie nog niet volledig bewerkbaar na aanmaak; er zijn geen voortgangsgrafieken en rusttimer is een handmatige sessienotitie. Oefeningssets en historie blijven volledig lokaal.
+De basis omvat oefenbibliotheek, routines samenstellen met oefeningen en doelsets, sessies autosaven en hervatten, sets bijhouden, trainingshistorie, schattingen van 1RM met de Epley-formule voor gewogen sets, lichaamsmetingen met datum, een rusttimer en voortgangsgrafieken per oefening (zwaarste set, geschatte 1RM en volume). De rusttimer gebruikt een eindtijd zodat hij na het terugkeren uit een achtergrondtab de resterende tijd kan bijwerken. Oefeningssets en historie blijven volledig lokaal.
