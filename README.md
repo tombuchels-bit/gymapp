@@ -29,7 +29,7 @@ De productie-uitvoer staat in `dist/`.
 
 ## Gratis publiceren
 
-Je kunt de map `dist` publiceren op GitHub Pages, Cloudflare Pages of Netlify. Voor GitHub Pages configureer je de Vite `base` op de repositorynaam wanneer de site onder een subpad staat, bouw je opnieuw en publiceer je `dist`. Een statische host moet HTTPS aanbieden voor PWA-installatie en offline caching. Publicatie is nog niet uitgevoerd.
+GitHub Pages is geconfigureerd voor deze repository (`tombuchels-bit/gymapp`) en bouwt `dist` via `.github/workflows/deploy.yml` zodra er naar `main` wordt gepusht. Open in GitHub **Settings → Pages → Build and deployment**, kies **GitHub Actions** als bron en pusht daarna je wijzigingen naar `main`. De site hoort beschikbaar te komen op `https://tombuchels-bit.github.io/gymapp/` zodra de workflow groen is. Publicatie is nog niet uitgevoerd. Met GitHub Free moet de repository openbaar zijn voor GitHub Pages.
 
 ## Installeren op iPhone
 
