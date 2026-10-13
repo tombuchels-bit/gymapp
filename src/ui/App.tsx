@@ -6,7 +6,7 @@ import ProgressChart from './ProgressChart';
 import { MeasurementEditor, RoutineEditor } from './FeatureSheets';
 type Page='home'|'workouts'|'train'|'progress'|'settings';
 const dateText=(d:number)=>new Intl.DateTimeFormat('nl-NL',{weekday:'long',day:'numeric',month:'long'}).format(new Date(d));
-const lastPerformance=(workouts:Workout[],exerciseId:string)=>{for(const workout of [...workouts].filter(item=>item.endedAt).sort((a,b)=>b.startedAt-a.startedAt)){const exercise=workout.exercises.find(item=>item.exerciseId===exerciseId);const sets=exercise?.sets.filter(item=>item.done)??[];if(sets.length)return{date:workout.startedAt,sets}}return null};
+const lastPerformance=(workouts:Workout[],exerciseId:string)=>{for(const workout of [...workouts].filter(item=>item.endedAt).sort((a,b)=>b.startedAt-a.startedAt)){const exercise=workout.exercises.find(item=>item.exerciseId===exerciseId);const sets=exercise?.sets??[];if(sets.length)return{date:workout.startedAt,sets}}return null};
 export default function App(){
  const [page,setPage]=useState<Page>('home'),[exercises,setExercises]=useState<Exercise[]>([]),[routines,setRoutines]=useState<Routine[]>([]),[workouts,setWorkouts]=useState<Workout[]>([]),[settings,setSettings]=useState<Settings>(defaultSettings),[active,setActive]=useState<Workout|null>(null),[modal,setModal]=useState(false),[query,setQuery]=useState(''),[busy,setBusy]=useState(true),[message,setMessage]=useState(''),[measurements,setMeasurements]=useState<Measurement[]>([]);
  const [showRoutineEditor,setShowRoutineEditor]=useState(false),[showMeasurementEditor,setShowMeasurementEditor]=useState(false);
